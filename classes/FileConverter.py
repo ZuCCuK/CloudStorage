@@ -69,7 +69,6 @@ class FileConverter():
 	def CONVERT_VIDEO_TO_BINARY(self, path: str) -> str:
 		to_return = ""
 		data = ""
-		
 		return to_return
 
 	@time_function
@@ -115,6 +114,5 @@ class FileConverter():
 
 		for image in images:
 			video.write(cv2.imread(os.path.join(self.images_folder, image)))
-
 		cv2.destroyAllWindows()
 		video.release()
