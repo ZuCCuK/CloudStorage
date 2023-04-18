@@ -109,9 +109,7 @@ class FileConverter():
 		images.sort()
 		frame = cv2.imread(os.path.join(self.images_folder, images[0]))
 		height, width, layers = frame.shape
-
 		video = cv2.VideoWriter(video_name, 0, self.fps, (width, height))
-
 		for image in images:
 			video.write(cv2.imread(os.path.join(self.images_folder, image)))
 		cv2.destroyAllWindows()
